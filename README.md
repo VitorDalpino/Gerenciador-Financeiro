@@ -24,7 +24,10 @@
 
 ## 📂 Estrutura do Projeto
 ### 🔄 Padrão de Arquitetura MVC:
-  O projeto foi estruturado seguindo o padrão Model-View-Controller (MVC), que separa as responsabilidades da aplicação em três camadas — Model (dados e regras de negócio), View (interface com o usuário) e Controller (lógica de controle e comunicação entre as camadas) — facilitando a organização, manutenção e escalabilidade do código.
+  O projeto foi estruturado seguindo o padrão Model-View-Controller (MVC), que separa as responsabilidades da aplicação em três camadas 
+  * Model (dados e regras de negócio)
+  * View (interface com o usuário)
+  * Controller (lógica de controle e comunicação entre as camadas) — facilitando a organização, manutenção e escalabilidade do código.
 <p align="center">
   <img src="./midia/estrutura.png" alt="Tela Principal" width="300"/>
 </p>
