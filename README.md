@@ -1,7 +1,7 @@
 # 💰 Sistema de Gestão Financeira Pessoal 
 Aplicação desenvolvida em Java com Swing para auxiliar usuários no gerenciamento de suas finanças pessoais, permitindo o cadastro de receitas e despesas, categorização, autenticação de usuários e visualização de um resumo financeiro.
 
-[![Vídeo Demonstração](https://img.youtube.com/vi/8lvvXZ__8yI&t=5s/mqdefault.jpg)](https://www.youtube.com/watch?v=8lvvXZ__8yI&t=5s)
+[![Vídeo de apresentação do sistema](https://img.youtube.com/vi/8lvvXZ__8yI&t=5s/mqdefault.jpg)](https://www.youtube.com/watch?v=8lvvXZ__8yI&t=5s)
 
 ## 📌 Objetivo
 Este projeto foi desenvolvido como parte da disciplina Laboratório de Programação Orientada a Objetos (2025/1) com o objetivo de aplicar os conceitos de POO em uma aplicação gráfica funcional, intuitiva e útil para o dia a dia.
