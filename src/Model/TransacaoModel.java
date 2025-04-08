@@ -3,31 +3,45 @@ package Model;
 import java.time.LocalDate;
 
 public class TransacaoModel {
-    public int id;
-    public double valor;
-    public LocalDate data;
-    public String descricao;
-    public String tipo; // "receita" ou "despesa"
-    public CategoriaModel categoria; // Associação com Categoria
-
-    public TransacaoModel() {
+    public enum TipoTransacao {
+        RECEITA, DESPESA
     }
 
-    public TransacaoModel(int id, double valor, LocalDate data, String descricao, String tipo, CategoriaModel categoria) {
-        this.id = id;
+    private static int nextId = 1;
+
+    private int id;
+    private double valor;
+    private CategoriaModel categoria;
+    private LocalDate data;
+    private String descricao;
+    private TipoTransacao tipo;
+    private UsuarioModel usuario;
+
+    public TransacaoModel(double valor,
+                          CategoriaModel categoria,
+                          LocalDate data,
+                          String descricao,
+                          TipoTransacao tipo,
+                          UsuarioModel usuario) {
+        this.id = nextId++;
         this.valor = valor;
+        this.categoria = categoria;
         this.data = data;
         this.descricao = descricao;
         this.tipo = tipo;
-        this.categoria = categoria;
+        this.usuario = usuario;
     }
 
     public int getId() {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public double getValor() {
+        return valor;
+    }
+
+    public void setValor(double valor) {
+        this.valor = valor;
     }
 
     public CategoriaModel getCategoria() {
@@ -38,12 +52,12 @@ public class TransacaoModel {
         this.categoria = categoria;
     }
 
-    public String getTipo() {
-        return tipo;
+    public LocalDate getData() {
+        return data;
     }
 
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
+    public void setData(LocalDate data) {
+        this.data = data;
     }
 
     public String getDescricao() {
@@ -54,19 +68,19 @@ public class TransacaoModel {
         this.descricao = descricao;
     }
 
-    public LocalDate getData() {
-        return data;
+    public TipoTransacao getTipo() {
+        return tipo;
     }
 
-    public void setData(LocalDate data) {
-        this.data = data;
+    public void setTipo(TipoTransacao tipo) {
+        this.tipo = tipo;
     }
 
-    public double getValor() {
-        return valor;
+    public UsuarioModel getUsuario() {
+        return usuario;
     }
 
-    public void setValor(double valor) {
-        this.valor = valor;
+    public void setUsuario(UsuarioModel usuario) {
+        this.usuario = usuario;
     }
 }

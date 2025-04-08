@@ -1,25 +1,20 @@
 package Model;
 
 public class CategoriaModel {
-    public int id;
-    public String nome;
+    private static int nextId = 1;
 
-    // Construtor vazio
-    public CategoriaModel() {
-    }
+    private int id;
+    private String nome;
+    private String descricao;
 
-    // Construtor com parâmetros
-    public CategoriaModel(int id, String nome) {
-        this.id = id;
+    public CategoriaModel(String nome, String descricao) {
+        this.id = nextId++;
         this.nome = nome;
+        this.descricao = descricao;
     }
 
     public int getId() {
         return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getNome() {
@@ -28,5 +23,18 @@ public class CategoriaModel {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
+    @Override
+    public String toString() {
+        return nome;
     }
 }

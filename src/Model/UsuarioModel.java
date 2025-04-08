@@ -1,18 +1,15 @@
 package Model;
 
 public class UsuarioModel {
-    public int id;
-    public String nome;
-    public String login;
-    public String senha;
+    private static int nextId = 1;
 
-    // Construtor vazio
-    public UsuarioModel() {
-    }
+    private int id;
+    private String nome;
+    private String login;
+    private String senha;
 
-    // Construtor com parâmetros
-    public UsuarioModel(int id, String nome, String login, String senha) {
-        this.id = id;
+    public UsuarioModel(String nome, String login, String senha) {
+        this.id = nextId++;
         this.nome = nome;
         this.login = login;
         this.senha = senha;
@@ -20,10 +17,6 @@ public class UsuarioModel {
 
     public int getId() {
         return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getNome() {
@@ -34,19 +27,19 @@ public class UsuarioModel {
         this.nome = nome;
     }
 
-    public String getSenha() {
-        return senha;
-    }
-
-    public void setSenha(String senha) {
-        this.senha = senha;
-    }
-
     public String getLogin() {
         return login;
     }
 
     public void setLogin(String login) {
         this.login = login;
+    }
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
     }
 }
